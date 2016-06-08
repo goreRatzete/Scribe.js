@@ -1,18 +1,18 @@
 /* jshint -W098 */
 (function() {
     var scribe = require('../scribe')(),
-        express = require('express'),
+        express = require('koa'),
         app = express(),
         console = process.console;
 
     app.set('port', (process.env.PORT || 5000));
 
-    //Create a Console2 for express
+    //Create a Console2 for koa
     //with logs saved in /expressLogger
     var expressConsole = scribe.console({
         console: {
             colors: 'white',
-            timeColors: ['grey', 'underline'],
+            timeColors: ['grey', 'underline']
         },
         createBasic: false,
         logWriter: {
@@ -34,7 +34,7 @@
     };
 
     //Pass the console and the filter
-    app.use(scribe.express.logger(expressConsole, validate));
+    app.use(scribe.koa.logger(expressConsole, validate));
 
     var port = app.get("port");
 

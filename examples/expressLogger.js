@@ -1,13 +1,13 @@
 /* jshint -W098 */
 (function() {
     var scribe = require('../scribe')(),
-        express = require('express'),
+        express = require('koa'),
         app = express(),
         console = process.console;
 
     app.set('port', (process.env.PORT || 5000));
 
-    app.use(scribe.express.logger()); //Log each request
+    app.use(scribe.koa.logger()); //Log each request
 
     var port = app.get("port");
 

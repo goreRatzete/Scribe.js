@@ -6,7 +6,7 @@
 
     var Console2      = require('./lib/console2.js'),
         LogWriter     = require('./lib/logWriter.js').LogWriter,
-        ExpressLogger = require('./lib/expressLogger.js'),
+        KoaLogger = require('./lib/koaLogger.js'),
         webPanel      = require('./lib/webPanel.js');
 
 
@@ -181,8 +181,9 @@
          * @return  an express Router
          */
         var initWebPanel = function () {
-
-            return webPanel(consoles);
+            const test = webPanel(consoles);
+            console.log(test);
+            return test;
 
         };
 
@@ -211,12 +212,12 @@
             webPanel : initWebPanel,
 
             /**
-             * express
+             * koa
              *
-             * Utilities for express
+             * Utilities for koa
              * @type {Object}
              */
-            express  : ExpressLogger,
+            koa: KoaLogger,
 
             /**
              * Console2

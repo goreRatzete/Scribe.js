@@ -1,6 +1,6 @@
 /* jshint -W079 */
 (function() {
-    var express = require('express'),
+    var express = require('koa'),
         app = express(),
         scribe = require('../scribe')(),
         console = process.console;
@@ -47,7 +47,7 @@
 })();
 /* jshint -W079 */
 (function() {
-    var express = require('express'),
+    var express = require('koa'),
         app = express(),
         scribe = require('../scribe')(),
         console = process.console;

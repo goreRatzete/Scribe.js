@@ -1,7 +1,7 @@
 /* jshint -W079 */
 (function() {
     var auth = require('http-auth'), // @see https://github.com/gevorg/http-auth
-        express = require('express'),
+        express = require('koa'),
         app = express(),
         scribe = require('../scribe')(),
         console = process.console;

@@ -2,7 +2,7 @@
 (function() {
     var scribe = require('../scribe')(),
         console = process.console,
-        express = require('express'),
+        express = require('koa'),
         path = require('path'),
         app = express();
 
@@ -16,7 +16,7 @@
     app.use('/', express.static(path.join(__dirname, 'public')));
 
     // scribe
-    app.use(scribe.express.logger());
+    app.use(scribe.koa.logger());
     app.use('/logs', scribe.webPanel());
 
     // index

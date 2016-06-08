@@ -2,7 +2,7 @@
 (function() {
     var scribe = require('../scribe')(),
         console = process.console,
-        express = require('express'),
+        express = require('koa'),
         app = express();
 
 
