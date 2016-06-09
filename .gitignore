@@ -10,3 +10,4 @@ Thumbs.db
 npm-debug.logGruntfile.js
 npm-debug.log
 .idea/
+examples/logs

@@ -9,16 +9,16 @@ import scribejs from '../scribe'
 
 
 const scribe = scribejs();
-
 const console = process.console;
 const webPanel = scribe.webPanel();
+
 
 const app = new Koa();
 const router = Router();
 
 app.use(convert(bodyparser()));
 app.use(convert(json()));
-app.use(convert(scribe.koa.logger()));
+app.use(scribe.koa.logger());
 //app.use(convert(costatic(__dirname + '/public')));
 
 // logger
